@@ -89,3 +89,5 @@ CMD ["/app/scripts/entrypoint.sh"]
 
 
 FROM ${SELECTED_STAGE:-official} AS final
+
+COPY --chmod=0755 docker/99-patch-max-tokens.sh /etc/cont-init.d/99-patch-max-tokens.sh
